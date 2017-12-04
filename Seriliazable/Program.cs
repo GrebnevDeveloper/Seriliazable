@@ -21,6 +21,15 @@ namespace Seriliazable
                 Console.WriteLine(handlerJson(strForSeriliazable));
             }
         }
+
+        //todo: выделите интерфейс 
+        //и наследуйте от него JsonSeriazlier, XmlSerializer
+        interface ISerializer
+        {
+            string Serialize<T>(T str);
+            T Deserialize<T>(string str);
+        }
+
         public static string handlerXml(string strForSeriliazable)
         {
             XmlSerializer xs = new XmlSerializer(typeof(Input));
