@@ -21,7 +21,7 @@ namespace Seriliazable
         [TestCase]
         public void handlerJson()
         {
-            Assert.AreEqual("{\"SumResult\":30.30,\"MulResult\":4,\"SortedInputs\":[1.0,1.01,2.02,4.0]}",
+            Assert.AreEqual("{\"SumResult\":30.30,\"MulResult\":4,\"SortedInputs\":[1,1.01,2.02,4]}",
                 Program.handlerJson("{\"K\":10,\"Sums\":[1.01,2.02],\"Muls\":[1,4]}"));
         }
     }
